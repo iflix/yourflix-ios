@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EEBC23C1F4565A500BAA14C /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EEBC23B1F4565A500BAA14C /* movies.json */; };
+		8EEBC23E1F4565E100BAA14C /* tv.json in Resources */ = {isa = PBXBuildFile; fileRef = 8EEBC23D1F4565E100BAA14C /* tv.json */; };
 		C9AA469F1F45163500469B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA469E1F45163500469B63 /* AppDelegate.swift */; };
 		C9AA46A61F45163500469B63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AA46A41F45163500469B63 /* Main.storyboard */; };
 		C9AA46A81F45163500469B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AA46A71F45163500469B63 /* Assets.xcassets */; };
 		C9AA46AB1F45163500469B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AA46A91F45163500469B63 /* LaunchScreen.storyboard */; };
-		C9AA46B51F4517DB00469B63 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = C9AA46B31F4517DB00469B63 /* movies.json */; };
-		C9AA46B61F4517DB00469B63 /* tv.json in Resources */ = {isa = PBXBuildFile; fileRef = C9AA46B41F4517DB00469B63 /* tv.json */; };
 		C9AA46BA1F45186500469B63 /* TV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA46B91F45186500469B63 /* TV.swift */; };
 		C9AA46BC1F451C7B00469B63 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA46BB1F451C7B00469B63 /* Movie.swift */; };
 		C9AA46BE1F451E2600469B63 /* TVDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA46BD1F451E2600469B63 /* TVDataLoader.swift */; };
@@ -27,14 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8EEBC23B1F4565A500BAA14C /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = movies.json; path = yourflix/movies.json; sourceTree = "<group>"; };
+		8EEBC23D1F4565E100BAA14C /* tv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tv.json; path = yourflix/tv.json; sourceTree = "<group>"; };
 		C9AA469B1F45163500469B63 /* yourflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yourflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AA469E1F45163500469B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9AA46A51F45163500469B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9AA46A71F45163500469B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9AA46AA1F45163500469B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9AA46AC1F45163500469B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9AA46B31F4517DB00469B63 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = movies.json; path = fixtures/movies.json; sourceTree = "<group>"; };
-		C9AA46B41F4517DB00469B63 /* tv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = tv.json; path = fixtures/tv.json; sourceTree = "<group>"; };
 		C9AA46B91F45186500469B63 /* TV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TV.swift; sourceTree = "<group>"; };
 		C9AA46BB1F451C7B00469B63 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		C9AA46BD1F451E2600469B63 /* TVDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVDataLoader.swift; sourceTree = "<group>"; };
@@ -94,8 +94,8 @@
 		C9AA46B21F4517C500469B63 /* fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				C9AA46B31F4517DB00469B63 /* movies.json */,
-				C9AA46B41F4517DB00469B63 /* tv.json */,
+				8EEBC23B1F4565A500BAA14C /* movies.json */,
+				8EEBC23D1F4565E100BAA14C /* tv.json */,
 			);
 			name = fixtures;
 			sourceTree = "<group>";
@@ -191,11 +191,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EEBC23C1F4565A500BAA14C /* movies.json in Resources */,
 				C9AA46AB1F45163500469B63 /* LaunchScreen.storyboard in Resources */,
 				C9AA46A81F45163500469B63 /* Assets.xcassets in Resources */,
-				C9AA46B51F4517DB00469B63 /* movies.json in Resources */,
+				8EEBC23E1F4565E100BAA14C /* tv.json in Resources */,
 				C9AA46A61F45163500469B63 /* Main.storyboard in Resources */,
-				C9AA46B61F4517DB00469B63 /* tv.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +383,7 @@
 				C9AA46B11F45163500469B63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
