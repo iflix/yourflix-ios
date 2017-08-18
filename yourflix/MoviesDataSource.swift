@@ -1,7 +1,7 @@
 import UIKit
 
 final class MoviesDataSource: NSObject, UICollectionViewDataSource {
-    var movies: [Movie] = []
+    var movies: [[String:Any]] = []
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

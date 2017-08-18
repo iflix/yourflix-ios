@@ -11,7 +11,10 @@ class MoviesController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        dataSource.movies = dataLoader.load()
+        guard let movies =  dataLoader.load() else {
+            return
+        }
+        dataSource.movies = movies
         collectionView?.dataSource = dataSource
     }
 }
@@ -22,8 +25,11 @@ extension MoviesController {
 
         let asset = dataSource.movies[indexPath.row]
 
-        guard let url = URL(string: "https:\(asset.imageUrl)") else { return }
-
+        guard
+            let endpoint = asset["imageUrl"],
+            let url = URL(string: "https:\(endpoint)")
+        else { return }
+        
         let request = URLRequest(url: url)
 
         moviesCell.imageDownloadTask = URLSession.shared.dataTask(with: request) { data, response, error in

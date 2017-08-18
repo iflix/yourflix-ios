@@ -1,7 +1,7 @@
 import UIKit
 
 final class TVDataSource: NSObject, UICollectionViewDataSource {
-    var shows: [TV] = []
+    var shows: [[String:Any]] = []
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

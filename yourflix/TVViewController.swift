@@ -11,7 +11,10 @@ class TVViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        dataSource.shows = dataLoader.load()
+        guard  let shows = dataLoader.load() else {
+            return
+        }
+        dataSource.shows = shows
         collectionView?.dataSource = dataSource
     }
 }
@@ -22,12 +25,18 @@ extension TVViewController {
 
         let asset = dataSource.shows[indexPath.row]
 
-        guard let url = URL(string: "https:\(asset.imageUrl)") else { return }
+        
+        guard
+            let endpoint = asset["imageUrl"],
+            let url = URL(string: "https:\(endpoint)")
+        else { return }
 
         let request = URLRequest(url: url)
 
         tvCell.imageDownloadTask = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else { return }
+            guard let data = data else {
+                return
+            }
 
             DispatchQueue.main.async {
                 tvCell.imageView.image = UIImage(data: data)
