@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MJ2-Fi-fpN" kind="relationship" relationship="viewControllers" id="6TB-JL-LOk"/>
+                        <segue destination="MxX-O3-R9P" kind="relationship" relationship="viewControllers" id="zuu-9e-v7D"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-73" y="1"/>
+        </scene>
+        <!--TV-->
+        <scene sceneID="Dge-Ld-4zX">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="MJ2-Fi-fpN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TV" id="HFW-Kc-4fD"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UNC-LV-Cd4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="77L-WR-Q8U" kind="relationship" relationship="rootViewController" id="4AS-88-saT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9NB-Lr-5EW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="-277"/>
+        </scene>
+        <!--TV-->
+        <scene sceneID="eHl-ue-Rdl">
+            <objects>
+                <collectionViewController id="77L-WR-Q8U" customClass="TVViewController" customModule="yourflix" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="8YW-48-xv1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UkX-ra-sT0">
+                            <size key="itemSize" width="100" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tv" id="w0j-es-apY" customClass="TVCell" customModule="yourflix" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XJg-l3-mrX">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XJg-l3-mrX" secondAttribute="trailing" id="14g-5B-psz"/>
+                                    <constraint firstItem="XJg-l3-mrX" firstAttribute="leading" secondItem="w0j-es-apY" secondAttribute="leading" id="RPy-aR-iLm"/>
+                                    <constraint firstItem="XJg-l3-mrX" firstAttribute="top" secondItem="w0j-es-apY" secondAttribute="top" id="ec0-tZ-vv7"/>
+                                    <constraint firstAttribute="bottom" secondItem="XJg-l3-mrX" secondAttribute="bottom" id="gKk-01-jjo"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="XJg-l3-mrX" id="niE-KR-5Vb"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="77L-WR-Q8U" id="sRf-de-7ui"/>
+                            <outlet property="delegate" destination="77L-WR-Q8U" id="H65-Xy-fFc"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="TV" id="hXX-Zx-Kit"/>
+                    <navigationItem key="navigationItem" id="ZgI-4z-Fhe"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oI5-Vm-iF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1438" y="-278"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="13x-G0-Pbp">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="MxX-O3-R9P" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movies" id="Nlg-QV-Sci"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HQ3-4i-X66">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Moz-Ce-vL1" kind="relationship" relationship="rootViewController" id="Szu-oH-bz9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2y-uD-diN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="710" y="382"/>
+        </scene>
+        <!--Movies Controller-->
+        <scene sceneID="5kH-2t-ZMd">
+            <objects>
+                <collectionViewController id="Moz-Ce-vL1" customClass="MoviesController" customModule="yourflix" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Hsd-pk-osb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L1i-B8-6HI">
+                            <size key="itemSize" width="100" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movie" id="1Rk-HT-esg" customClass="MoviesCell" customModule="yourflix" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qeE-dH-pPA">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="qeE-dH-pPA" firstAttribute="top" secondItem="1Rk-HT-esg" secondAttribute="top" id="1Sm-Uy-M5G"/>
+                                    <constraint firstItem="qeE-dH-pPA" firstAttribute="leading" secondItem="1Rk-HT-esg" secondAttribute="leading" id="SY4-zS-EEr"/>
+                                    <constraint firstAttribute="trailing" secondItem="qeE-dH-pPA" secondAttribute="trailing" id="llF-SG-v5F"/>
+                                    <constraint firstAttribute="bottom" secondItem="qeE-dH-pPA" secondAttribute="bottom" id="yoc-kL-f9j"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="qeE-dH-pPA" id="ZKO-pt-3Gd"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Moz-Ce-vL1" id="DV1-Zn-yhu"/>
+                            <outlet property="delegate" destination="Moz-Ce-vL1" id="mQw-Qc-80e"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="f1J-3e-v8V"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZFD-Wm-xK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1438" y="382"/>
+        </scene>
+    </scenes>
+</document>
