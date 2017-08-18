@@ -15,12 +15,10 @@
 		C9AA46AB1F45163500469B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AA46A91F45163500469B63 /* LaunchScreen.storyboard */; };
 		C9AA46BE1F451E2600469B63 /* TVDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA46BD1F451E2600469B63 /* TVDataLoader.swift */; };
 		C9AA46C01F45260200469B63 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA46BF1F45260200469B63 /* TVViewController.swift */; };
-		C9AA46C21F45274500469B63 /* TVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA46C11F45274500469B63 /* TVDataSource.swift */; };
 		C9AA46C41F45280900469B63 /* TVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA46C31F45280900469B63 /* TVCell.swift */; };
 		C9AA46C61F453B4500469B63 /* MoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA46C51F453B4500469B63 /* MoviesCell.swift */; };
 		C9AA46C81F453B5D00469B63 /* MoviesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA46C71F453B5D00469B63 /* MoviesController.swift */; };
 		C9AA46CA1F453B9700469B63 /* MoviesDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA46C91F453B9700469B63 /* MoviesDataLoader.swift */; };
-		C9AA46CF1F453D3E00469B63 /* MoviesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AA46CE1F453D3E00469B63 /* MoviesDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +32,10 @@
 		C9AA46AC1F45163500469B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9AA46BD1F451E2600469B63 /* TVDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVDataLoader.swift; sourceTree = "<group>"; };
 		C9AA46BF1F45260200469B63 /* TVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
-		C9AA46C11F45274500469B63 /* TVDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVDataSource.swift; sourceTree = "<group>"; };
 		C9AA46C31F45280900469B63 /* TVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVCell.swift; sourceTree = "<group>"; };
 		C9AA46C51F453B4500469B63 /* MoviesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesCell.swift; sourceTree = "<group>"; };
 		C9AA46C71F453B5D00469B63 /* MoviesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesController.swift; sourceTree = "<group>"; };
 		C9AA46C91F453B9700469B63 /* MoviesDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesDataLoader.swift; sourceTree = "<group>"; };
-		C9AA46CE1F453D3E00469B63 /* MoviesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +95,6 @@
 			children = (
 				C9AA46BD1F451E2600469B63 /* TVDataLoader.swift */,
 				C9AA46BF1F45260200469B63 /* TVViewController.swift */,
-				C9AA46C11F45274500469B63 /* TVDataSource.swift */,
 				C9AA46C31F45280900469B63 /* TVCell.swift */,
 			);
 			name = tv;
@@ -111,7 +106,6 @@
 				C9AA46C51F453B4500469B63 /* MoviesCell.swift */,
 				C9AA46C71F453B5D00469B63 /* MoviesController.swift */,
 				C9AA46C91F453B9700469B63 /* MoviesDataLoader.swift */,
-				C9AA46CE1F453D3E00469B63 /* MoviesDataSource.swift */,
 			);
 			name = movies;
 			sourceTree = "<group>";
@@ -198,11 +192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AA46C41F45280900469B63 /* TVCell.swift in Sources */,
-				C9AA46C21F45274500469B63 /* TVDataSource.swift in Sources */,
 				C9AA46CA1F453B9700469B63 /* MoviesDataLoader.swift in Sources */,
 				C9AA46BE1F451E2600469B63 /* TVDataLoader.swift in Sources */,
 				C9AA46C01F45260200469B63 /* TVViewController.swift in Sources */,
-				C9AA46CF1F453D3E00469B63 /* MoviesDataSource.swift in Sources */,
 				C9AA46C81F453B5D00469B63 /* MoviesController.swift in Sources */,
 				C9AA469F1F45163500469B63 /* AppDelegate.swift in Sources */,
 				C9AA46C61F453B4500469B63 /* MoviesCell.swift in Sources */,

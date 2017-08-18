@@ -1,7 +1,7 @@
 import UIKit
 
 class MoviesController: UICollectionViewController {
-    let dataSource = MoviesDataSource()
+    var movies: [[String:Any]] = []
     let dataLoader = MoviesDataLoader(resource: "movies")
 
     override func viewDidLoad() {
@@ -14,27 +14,39 @@ class MoviesController: UICollectionViewController {
         guard let movies =  dataLoader.load() else {
             return
         }
-        dataSource.movies = movies
-        collectionView?.dataSource = dataSource
+        self.movies = movies
+        collectionView?.dataSource = self
     }
-}
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return movies.count
+    }
 
-extension MoviesController {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let moviesCell = collectionView.dequeueReusableCell(withReuseIdentifier: "movie", for: indexPath) as? MoviesCell else { fatalError() }
+        
+        return moviesCell
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let moviesCell = cell as? MoviesCell else { return }
-
-        let asset = dataSource.movies[indexPath.row]
-
+        
+        let asset = movies[indexPath.row]
+        
         guard
             let endpoint = asset["imageUrl"],
             let url = URL(string: "https:\(endpoint)")
-        else { return }
+            else { return }
         
         let request = URLRequest(url: url)
-
+        
         moviesCell.imageDownloadTask = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else { return }
-
+            
             DispatchQueue.main.async {
                 moviesCell.imageView.image = UIImage(data: data)
             }
